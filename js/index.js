@@ -96,3 +96,50 @@ contact.querySelector('p:nth-child(4)').textContent = siteContent.contact.email;
 
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
+
+let navigation = document.querySelectorAll('nav a');
+for (let link of navigation){
+  link.style.color = 'green';
+}
+
+const newNav1 = document.createElement('a');
+newNav1.textContent = 'Beginning';
+newNav1.href = '#';
+
+const newNav2 = document.createElement('a');
+newNav2.textContent = 'End';
+newNav2.href = '#';
+
+const navSection = document.querySelector('nav');
+
+
+navSection.appendChild(newNav2);
+navSection.prepend(newNav1);
+
+
+const header = document.querySelector('header');
+header.style.backgroundColor = '#505050';
+
+const redButton = document.createElement('button');
+redButton.textContent = 'Red';
+redButton.classList.add('redButton');
+
+const blueButton = document.createElement('button');
+blueButton.textContent = 'Blue';
+blueButton.classList.add('blueButton');
+blueButton.addEventListener('click', event => {
+  document.querySelector('body').style.backgroundColor = 'blue';
+});
+
+const ctaSection = document.querySelector('.cta-text');
+ctaSection.appendChild(redButton);
+ctaSection.appendChild(blueButton);
+redButton.addEventListener('click', event => {
+  document.querySelector('body').style.backgroundColor = 'red';
+});
+
+const getStartedButton = ctaSection.querySelector('button');
+getStartedButton.addEventListener('click', event => {
+  document.querySelector('body').style.backgroundColor = '';
+});
+
