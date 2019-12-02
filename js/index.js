@@ -75,3 +75,24 @@ about.querySelector('p').textContent = siteContent["main-content"]["about-conten
 let middleImg = document.querySelector('#middle-img');
 middleImg.src = siteContent["main-content"]["middle-img-src"];
 
+let services = document.querySelector('.main-content .bottom-content .text-content:nth-child(1)')
+services.querySelector('h4').textContent = siteContent["main-content"]["services-h4"];
+services.querySelector('p').textContent = siteContent["main-content"]["services-content"];
+
+let product = document.querySelector('.main-content .bottom-content .text-content:nth-child(2)')
+product.querySelector('h4').textContent = siteContent["main-content"]["product-h4"];
+product.querySelector('p').textContent = siteContent["main-content"]["product-content"];
+
+let vision = document.querySelector('.main-content .bottom-content .text-content:nth-child(3)')
+vision.querySelector('h4').textContent = siteContent["main-content"]["vision-h4"];
+vision.querySelector('p').textContent = siteContent["main-content"]["vision-content"];
+
+let contact = document.querySelector('.contact');
+document.querySelector('.contact h4').textContent = siteContent.contact["contact-h4"];
+
+contact.querySelector('p:nth-child(2)').textContent = siteContent.contact.address;
+contact.querySelector('p:nth-child(3)').textContent = siteContent.contact.phone;
+contact.querySelector('p:nth-child(4)').textContent = siteContent.contact.email;
+
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
