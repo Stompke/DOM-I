@@ -40,3 +40,38 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+
+function addLink (position, text){
+  let currentNav = document.querySelector('a:nth-child(' + position +')');
+  currentNav.textContent = text;
+}
+
+addLink(1, siteContent["nav"]["nav-item-1"]);
+addLink(2,siteContent["nav"]["nav-item-2"]);
+addLink(3,siteContent["nav"]["nav-item-3"]);
+addLink(4,siteContent["nav"]["nav-item-4"]);
+addLink(5,siteContent["nav"]["nav-item-5"]);
+addLink(6,siteContent["nav"]["nav-item-6"]);
+
+let ctaTextH1 = document.querySelector('.cta-text h1');
+ctaTextH1.textContent = siteContent.cta.h1;
+
+let ctaTextButton = document.querySelector('.cta-text button');
+ctaTextButton.textContent = siteContent.cta.button;
+
+let ctaImage = document.querySelector('#cta-img');
+ctaImage.src = siteContent.cta["img-src"];
+
+let features = document.querySelector('.main-content .top-content .text-content:nth-child(1)')
+features.querySelector('h4').textContent = siteContent["main-content"]["features-h4"];
+features.querySelector('p').textContent = siteContent["main-content"]["features-content"];
+
+let about = document.querySelector('.main-content .top-content .text-content:nth-child(2)')
+about.querySelector('h4').textContent = siteContent["main-content"]["about-h4"];
+about.querySelector('p').textContent = siteContent["main-content"]["about-content"];
+
+let middleImg = document.querySelector('#middle-img');
+middleImg.src = siteContent["main-content"]["middle-img-src"];
+
